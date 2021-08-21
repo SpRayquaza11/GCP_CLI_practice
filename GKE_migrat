@@ -1,0 +1,19 @@
+____________________setuP___________________________________
+---Install apache Bench
+sudo apt-get install apache2-utils
+-- verify isntall 
+ab -V
+--- then we clone repo
+--- setiing region and zone 
+gcloud config set compute/region us-central1
+gcloud config set compute/zone us-central1-a
+________________________deploy_____________________________
+make create   (may take a long time to complete)
+____________explore prime flask environement________________ 
+gcloud compute ssh vm-webserver --zone us-central1-a (run on webserver host)
+
+in cloud shell 
+
+gcloud compute ssh cos-vm --zone us-central1-a  (connects to vm)
+git clone https://github.com/GoogleCloudPlatform/gke-migration-to-containers.git
+cd gke-migration-to-containers/container
